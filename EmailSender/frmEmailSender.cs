@@ -91,7 +91,7 @@ namespace EmailSender
                     mailMessage.BodyEncoding = Encoding.UTF8;
 
                     client.Send(mailMessage);
-                    MessageBox.Show("Send email succeed!");
+                    MessageBox.Show("Send email successful!");
                 }
                 catch (Exception ex)
                 {
