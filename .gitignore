@@ -6,6 +6,7 @@ Thumbs.db
 *.vssscc
 *.suo
 *.sln.docstates
+*.log
 
 # Folders ignored
 _[Oo]utput/
