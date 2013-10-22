@@ -48,8 +48,6 @@ namespace EmailSender
             this.lblSubject = new System.Windows.Forms.Label();
             this.txtTo = new System.Windows.Forms.TextBox();
             this.lblTo = new System.Windows.Forms.Label();
-            this.txtFrom = new System.Windows.Forms.TextBox();
-            this.lblFrom = new System.Windows.Forms.Label();
             this.lblPort = new System.Windows.Forms.Label();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
@@ -97,18 +95,16 @@ namespace EmailSender
             this.groupBox1.Controls.Add(this.lblSubject);
             this.groupBox1.Controls.Add(this.txtTo);
             this.groupBox1.Controls.Add(this.lblTo);
-            this.groupBox1.Controls.Add(this.txtFrom);
-            this.groupBox1.Controls.Add(this.lblFrom);
             this.groupBox1.Location = new System.Drawing.Point(27, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(614, 528);
+            this.groupBox1.Size = new System.Drawing.Size(614, 507);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Email Box";
             // 
             // rtbBody
             // 
-            this.rtbBody.Location = new System.Drawing.Point(28, 201);
+            this.rtbBody.Location = new System.Drawing.Point(28, 174);
             this.rtbBody.Name = "rtbBody";
             this.rtbBody.Size = new System.Drawing.Size(555, 282);
             this.rtbBody.TabIndex = 13;
@@ -116,7 +112,7 @@ namespace EmailSender
             // 
             // txtCC
             // 
-            this.txtCC.Location = new System.Drawing.Point(86, 84);
+            this.txtCC.Location = new System.Drawing.Point(86, 57);
             this.txtCC.Name = "txtCC";
             this.txtCC.Size = new System.Drawing.Size(497, 20);
             this.txtCC.TabIndex = 9;
@@ -124,7 +120,7 @@ namespace EmailSender
             // lblCC
             // 
             this.lblCC.AutoSize = true;
-            this.lblCC.Location = new System.Drawing.Point(25, 87);
+            this.lblCC.Location = new System.Drawing.Point(25, 60);
             this.lblCC.Name = "lblCC";
             this.lblCC.Size = new System.Drawing.Size(21, 13);
             this.lblCC.TabIndex = 22;
@@ -132,7 +128,7 @@ namespace EmailSender
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(508, 494);
+            this.btnSend.Location = new System.Drawing.Point(508, 467);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 14;
@@ -144,7 +140,7 @@ namespace EmailSender
             // 
             this.pnlFormat.Controls.Add(this.rbHtml);
             this.pnlFormat.Controls.Add(this.rbText);
-            this.pnlFormat.Location = new System.Drawing.Point(85, 140);
+            this.pnlFormat.Location = new System.Drawing.Point(85, 113);
             this.pnlFormat.Name = "pnlFormat";
             this.pnlFormat.Size = new System.Drawing.Size(173, 22);
             this.pnlFormat.TabIndex = 21;
@@ -152,29 +148,29 @@ namespace EmailSender
             // rbHtml
             // 
             this.rbHtml.AutoSize = true;
+            this.rbHtml.Checked = true;
             this.rbHtml.Location = new System.Drawing.Point(1, 3);
             this.rbHtml.Name = "rbHtml";
             this.rbHtml.Size = new System.Drawing.Size(46, 17);
             this.rbHtml.TabIndex = 11;
+            this.rbHtml.TabStop = true;
             this.rbHtml.Text = "Html";
             this.rbHtml.UseVisualStyleBackColor = true;
             // 
             // rbText
             // 
             this.rbText.AutoSize = true;
-            this.rbText.Checked = true;
             this.rbText.Location = new System.Drawing.Point(53, 3);
             this.rbText.Name = "rbText";
             this.rbText.Size = new System.Drawing.Size(46, 17);
             this.rbText.TabIndex = 12;
-            this.rbText.TabStop = true;
             this.rbText.Text = "Text";
             this.rbText.UseVisualStyleBackColor = true;
             // 
             // lblEmailFormat
             // 
             this.lblEmailFormat.AutoSize = true;
-            this.lblEmailFormat.Location = new System.Drawing.Point(25, 146);
+            this.lblEmailFormat.Location = new System.Drawing.Point(25, 119);
             this.lblEmailFormat.Name = "lblEmailFormat";
             this.lblEmailFormat.Size = new System.Drawing.Size(39, 13);
             this.lblEmailFormat.TabIndex = 18;
@@ -183,7 +179,7 @@ namespace EmailSender
             // lblBody
             // 
             this.lblBody.AutoSize = true;
-            this.lblBody.Location = new System.Drawing.Point(25, 174);
+            this.lblBody.Location = new System.Drawing.Point(25, 147);
             this.lblBody.Name = "lblBody";
             this.lblBody.Size = new System.Drawing.Size(31, 13);
             this.lblBody.TabIndex = 15;
@@ -191,7 +187,7 @@ namespace EmailSender
             // 
             // txtSubject
             // 
-            this.txtSubject.Location = new System.Drawing.Point(85, 112);
+            this.txtSubject.Location = new System.Drawing.Point(85, 85);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(498, 20);
             this.txtSubject.TabIndex = 10;
@@ -199,7 +195,7 @@ namespace EmailSender
             // lblSubject
             // 
             this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(25, 115);
+            this.lblSubject.Location = new System.Drawing.Point(25, 88);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(43, 13);
             this.lblSubject.TabIndex = 13;
@@ -208,7 +204,7 @@ namespace EmailSender
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(85, 53);
+            this.txtTo.Location = new System.Drawing.Point(85, 26);
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(498, 20);
             this.txtTo.TabIndex = 8;
@@ -216,27 +212,11 @@ namespace EmailSender
             // lblTo
             // 
             this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(25, 56);
+            this.lblTo.Location = new System.Drawing.Point(25, 29);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(20, 13);
             this.lblTo.TabIndex = 11;
             this.lblTo.Text = "To";
-            // 
-            // txtFrom
-            // 
-            this.txtFrom.Location = new System.Drawing.Point(85, 27);
-            this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(498, 20);
-            this.txtFrom.TabIndex = 7;
-            // 
-            // lblFrom
-            // 
-            this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(25, 30);
-            this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(30, 13);
-            this.lblFrom.TabIndex = 9;
-            this.lblFrom.Text = "From";
             // 
             // lblPort
             // 
@@ -253,6 +233,7 @@ namespace EmailSender
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(54, 20);
             this.txtPort.TabIndex = 2;
+            this.txtPort.Text = "25";
             // 
             // lblUserName
             // 
@@ -336,7 +317,7 @@ namespace EmailSender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 623);
+            this.ClientSize = new System.Drawing.Size(663, 610);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblSSL);
             this.Controls.Add(this.txtPassword);
@@ -375,8 +356,6 @@ namespace EmailSender
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.TextBox txtTo;
         private System.Windows.Forms.Label lblTo;
-        private System.Windows.Forms.TextBox txtFrom;
-        private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblPort;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Label lblUserName;

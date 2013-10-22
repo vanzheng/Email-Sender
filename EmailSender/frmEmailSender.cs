@@ -54,7 +54,7 @@ namespace EmailSender
                     }
 
                     // Mail box setting.
-                    mailMessage.From = new MailAddress(txtFrom.Text.Trim());
+                    mailMessage.From = new MailAddress(txtUserName.Text.Trim());
 
                     string addressTo = txtTo.Text.Trim();
                     if (!string.IsNullOrEmpty(addressTo))
@@ -95,7 +95,7 @@ namespace EmailSender
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Send email failed! " + ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
